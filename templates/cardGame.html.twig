@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Main de cartes non triée</title>
+    <link href="{{ asset('css/index.css') }}" rel="stylesheet"/>
+</head>
+<body>
+    <h1>Ma main de cartes (non triée)</h1>
+    <ul>
+        {% for carte in hand %}
+            <li>{{ carte.couleur }} - {{ carte.valeur }}</li>
+        {% endfor %}
+    </ul>
+
+    <h1>Ma main de cartes (triée)</h1>
+    <ul>
+        {% for carte in sortedHand %}
+            <li>{{ carte.couleur }} - {{ carte.valeur }}</li>
+        {% endfor %}
+    </ul>
+    <a href="{{ path('card') }}">Generer une nouvelle main</a>
+    
+</body>
+</html>
